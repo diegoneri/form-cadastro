@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form method="POST" action="http://localhost:9000/api/cadastro">
+        <fieldset>
+            <legend>Nome e sobrenome</legend>
+            <label for="nome_usuario">Nome: </label>
+            <input type="text" name="nome_usuario" id="nome_usuario" 
+                placeholder="Digite o nome"/><br/>
+            <label for="sobrenome_usuario">Sobrenome: </label>
+            <input type="text" name="sobrenome_usuario" id="sobrenome_usuario"
+                placeholder="Digite o sobrenome" disabled value="Teste"/><br/>
+        </fieldset>
+        <label for="numero_filhos">Filhos: </label>
+        <input type="number" name="numero_filhos" id="numero_filhos" min="0" max="5" value="0"/><br/>
+        
+        <label for="data_nasc">Data de Nascimento: </label>
+        <input type="date" name="data_nasc" id="data_nasc" value="2000-01-01"/>
+        <br/>
+
+        <label for="senha">Senha: </label>
+        <input type="password" name="senha" id="senha">
+        <br/>
+
+        <input type="checkbox" name="concordo" id="concordo" checked>  
+        <label for="concordo">Li e concordo</label>
+        <br/>     
+
+        <label for="comentario">Comentário</label><br/>
+        <textarea name="comentario" id="comentario" cols="30" rows="5"></textarea>        
+        <br/>
+
+        <label for="cidade_select">Cidade (seleção)</label>
+        <select name="cidade_select" id="cidade_select">
+            <option value="">-------</option>
+            <option value="1">Peruíbe</option>
+            <option value="2">Itanhaém</option>
+            <option value="3" selected>Mongaguá</option>
+        </select>
+        <br/>
+        <label for="cidade_list">Cidade (lista)</label><br/>
+        <select name="cidade_list" id="cidade_list" size="4">
+            <option value="">-------</option>
+            <option value="1">Peruíbe</option>
+            <option value="2">Itanhaém</option>
+            <option value="3" selected>Mongaguá</option>
+        </select>  
+        
+        <fieldset>
+            <legend>Possui habilitação?</legend>
+            <input type="radio" name="habilitacao" id="habilitacao_sim" value="s" checked>
+            <label for="habilitacao_sim">Sim</label>
+
+            <input type="radio" name="habilitacao" id="habilitacao_nao" value="n" >
+            <label for="habilitacao_nao">Não</label>            
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Reiniciar</button>        
+    </form>
+</body>
+</html>
